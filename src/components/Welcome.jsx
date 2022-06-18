@@ -16,7 +16,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
     step="0.0001"
     value={value}
     onChange={(e) => handleChange(e, name)}
-    className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
+    className="my-2 w-full rounded-sm p-2 outline-none text-white border-none text-sm white-glassmorphism"
   />
 );
 
@@ -24,16 +24,14 @@ const Welcome = () => {
   const isLoading = false;
   const connectWallet = () => {};
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = () => {};
 
   return (
     <div className="flex w-full justify-center items-center">
       <div className="flex md:flex-row flex-col items-start justify-center md:p-20 py-12 px-4 space-x-20">
         {/* 左側のInput */}
         <div className="flex flex-1 items-start flex-col md:mr-10 mt-10">
-          <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
-            暗号資産
-          </h1>
+          <h1 className="text-3xl sm:text-5xl text-white py-1">Crypt Card</h1>
 
           <div className="p-3 flex justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card .white-glassmorphism ">
             <div className="flex justify-between flex-col w-full h-full">
@@ -62,7 +60,7 @@ const Welcome = () => {
         </div>
         {/* 右側のInput */}
         <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
-          <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+          <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center white-glassmorphism">
             <Input placeholder="住所" name="addressTo" type="text" />
             <Input placeholder="通貨(ETH)" name="amount" type="number" />
             <Input placeholder="キーワード(Gif)" name="keyword" type="text" />

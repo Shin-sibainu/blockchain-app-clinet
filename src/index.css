@@ -14,13 +14,13 @@ body {
 }
 
 .gradient-bg-welcome {
-  background-color: #471a56;
+  background-color: #220d3a;
   background-image: radial-gradient(
       at 0% 0%,
-      rgb(29, 23, 56) 0,
+      rgb(32, 43, 110) 0,
       transparent 50%
     ),
-    radial-gradient(at 70% 20%, rgb(57, 74, 127) 0, transparent 50%);
+    radial-gradient(at 70% 20%, rgb(52, 94, 102) 0, transparent 50%);
 }
 
 .gradient-bg-services {
@@ -54,7 +54,7 @@ body {
 }
 
 .blue-glassmorphism {
-  background: rgb(41, 37, 37);
+  background: rgb(57, 97, 133);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
@@ -67,7 +67,7 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -84,18 +84,6 @@ body {
     radial-gradient(at 27% 71%, rgb(53, 109, 221) 0, transparent 49%),
     radial-gradient(at 74% 89%, rgb(215, 127, 39) 0, transparent 51%),
     radial-gradient(at 53% 75%, rgb(130, 32, 235) 0, transparent 45%);
-}
-
-.text-gradient {
-  background-color: #fff;
-  background-image: radial-gradient(
-      at 4% 36%,
-      hsla(0, 0%, 100%, 1) 0,
-      transparent 53%
-    ),
-    radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @tailwind base;
