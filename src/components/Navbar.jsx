@@ -14,7 +14,7 @@ const Navbar = () => {
         <li className="mx-4 cursor-pointer Exchange">交換</li>
         <li className="mx-4 cursor-pointer BlockChain">ブロックチェーン</li>
         <li className="mx-4 cursor-pointer Wallets">ウォレット</li>
-        <li className="bg-[#2952e3] py-2 px-7 rounded-full cursor-pointer hover:bg-[#2546bd]">
+        <li className="bg-[#6b407d] py-2 px-7 rounded-full cursor-pointer hover:bg-[#985688] duration-300">
           ログイン
         </li>
       </ul>
