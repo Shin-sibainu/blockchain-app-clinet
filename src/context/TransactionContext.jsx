@@ -35,6 +35,9 @@ export const TransactionProvider = ({ children }) => {
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [transactionCount, setTransactionCount] = useState(
+    localStorage.getItem("transactionCount")
+  );
 
   const handleChange = (e, name) => {
     setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
@@ -108,6 +111,12 @@ export const TransactionProvider = ({ children }) => {
       setIsLoading(true);
       console.log(`ローディング - ${transactionHash.hash}`);
       await transactionHash.wait();
+      setIsLoading(false);
+      console.log(`成功 - ${transactionHash.hash}`);
+
+      const transactionCount = await transactionContract.getTransactionCount();
+
+      setTransactionCount(transactionCount.toNumber());
     } catch (err) {
       console.log(err);
       throw new Error("イーサリアムオブジェクトがありません。");

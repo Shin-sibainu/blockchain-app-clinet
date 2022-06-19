@@ -13,79 +13,41 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.gradient-bg-welcome {
-  background-color: #220d3a;
-  background-image: radial-gradient(
-      at 0% 0%,
-      rgb(32, 43, 110) 0,
-      transparent 50%
-    ),
-    radial-gradient(at 70% 20%, rgb(52, 94, 102) 0, transparent 50%);
+.App {
+  height: 100vh;
+  width: 100%;
 }
 
-.gradient-bg-services {
-  background-color: #0f0e13;
-  background-image: radial-gradient(
-      at 0% 0%,
-      hsla(253, 16%, 7%, 1) 0,
-      transparent 50%
-    ),
-    radial-gradient(at 50% 100%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4px 20px;
+  background-color: rgb(54, 20, 61);
+  color: white;
 }
 
-.gradient-bg-transactions {
-  background-color: #0f0e13;
-  background-image: radial-gradient(
-      at 0% 100%,
-      hsla(253, 16%, 7%, 1) 0,
-      transparent 50%
-    ),
-    radial-gradient(at 50% 0%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+nav .logo h2 {
+  font-size: 32px;
+  font-weight: 500;
 }
 
-.gradient-bg-footer {
-  background-color: #0f0e13;
-  background-image: radial-gradient(
-      at 0% 100%,
-      hsla(253, 16%, 7%, 1) 0,
-      transparent 53%
-    ),
-    radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+nav .navLinks {
+  display: flex;
+  list-style: none;
 }
 
-.blue-glassmorphism {
-  background: rgb(57, 97, 133);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(138, 75, 75, 0.3);
+nav .navLinks li {
+  margin-right: 30px;
+  cursor: pointer;
 }
 
-/* input */
-.white-glassmorphism {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+nav button {
+  padding: 8px 17px;
+  background-color: #898ecf;
+  border: none;
+  border-radius: 6px;
+  border: 1px solid rgb(71, 77, 172);
+  cursor: pointer;
 }
-
-.eth-card {
-  background-color: #a099ff;
-  background-image: radial-gradient(
-      at 83% 67%,
-      rgb(152, 231, 156) 0,
-      transparent 58%
-    ),
-    radial-gradient(at 67% 20%, rgb(148, 113, 115) 0, transparent 59%),
-    radial-gradient(at 88% 35%, rgb(200, 126, 214) 0, transparent 50%),
-    radial-gradient(at 31% 91%, rgb(210, 196, 118) 0, transparent 52%),
-    radial-gradient(at 27% 71%, rgb(53, 109, 221) 0, transparent 49%),
-    radial-gradient(at 74% 89%, rgb(215, 127, 39) 0, transparent 51%),
-    radial-gradient(at 53% 75%, rgb(130, 32, 235) 0, transparent 45%);
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
