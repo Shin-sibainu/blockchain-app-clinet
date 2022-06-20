@@ -11,13 +11,24 @@ body {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(50, 82, 143);
+  background: linear-gradient(
+    126deg,
+    rgba(50, 82, 143, 0.9416141456582633) 21%,
+    rgba(104, 60, 147, 1) 94%
+  );
+  height: 100vh;
+  overflow: hidden;
 }
 
 .App {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
+/***
+ナビゲーションバー 
+***/
 nav {
   display: flex;
   width: 100%;
@@ -26,6 +37,11 @@ nav {
   padding: 4px 20px;
   background-color: rgb(54, 20, 61);
   color: white;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 191, 255, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
 }
 
 nav .logo h2 {
@@ -50,4 +66,127 @@ nav button {
   border-radius: 6px;
   border: 1px solid rgb(71, 77, 172);
   cursor: pointer;
+  color: white;
+  transition: all 0.3s;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(76, 61, 138, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+nav button:hover {
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(76, 61, 138, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+  color: yellowgreen;
+}
+
+/***
+メイン画面 
+***/
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 240px;
+}
+
+.cryptContainer h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 28px;
+  margin-top: -16px;
+  color: white;
+}
+
+.cryptContainer button {
+  padding: 2px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: #898ecf;
+  transition: all 0.3s;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 191, 255, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+.cryptContainer button:hover {
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(76, 61, 138, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+  color: yellowgreen;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background-color: #342356;
+  backdrop-filter: blur(1px);
+  padding: 0px 30px;
+  width: 400px;
+  height: 330px;
+  border-radius: 10px;
+  margin-left: -100px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 191, 255, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+.inputContainer input {
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px #1f2c5b dotted;
+  background-color: #503e74;
+  color: white;
+}
+
+.inputContainer button {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  padding: 7px;
+  font-size: 16px;
+  background: rgb(50, 82, 143);
+  background: linear-gradient(
+    126deg,
+    rgba(50, 82, 143, 0.9416141456582633) 21%,
+    rgba(104, 60, 147, 1) 94%
+  );
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: -10px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 191, 255, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+  color: white;
+}
+
+.inputContainer button:hover {
+  background-color: #1f2c5b;
+  color: yellowgreen;
 }

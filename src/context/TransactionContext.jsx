@@ -39,6 +39,7 @@ export const TransactionProvider = ({ children }) => {
     localStorage.getItem("transactionCount")
   );
 
+  //Mainの方のinputで使う
   const handleChange = (e, name) => {
     setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
   };
@@ -51,7 +52,7 @@ export const TransactionProvider = ({ children }) => {
       //メタマスクのアカウントIDを取得
       const accounts = await ethereum.request({ method: "eth_accounts" });
 
-      console.log(accounts);
+      console.log(accounts); //アカウントIDの表示
 
       //すでにメタマスクのアカウントを１つでも持っているなら
       if (accounts.length) {
@@ -75,6 +76,8 @@ export const TransactionProvider = ({ children }) => {
         method: "eth_requestAccounts",
       });
 
+      console.log(accounts[0]);
+
       setCurrentAccount(accounts[0]);
     } catch (err) {
       console.log(err);
@@ -87,6 +90,7 @@ export const TransactionProvider = ({ children }) => {
       if (!ethereum) return alert("メタマスクをインストールしてください");
 
       const { addressTo, amount, keyword, message } = formData;
+      console.log(addressTo);
       const transactionContract = getEthereumContract();
       const parsedAmount = ethers.utils.parseEther(amount);
 
